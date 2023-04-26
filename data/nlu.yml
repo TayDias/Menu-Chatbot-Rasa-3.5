@@ -1,0 +1,84 @@
+version: "3.1"
+
+nlu:
+- intent: inform
+  examples: |
+    - [pedra](game_opt)
+    - [papel](game_opt)
+    - [tesoura](game_opt)
+    - [r](game_opt)
+    - [p](game_opt)
+    - [s](game_opt)
+
+- intent: greet
+  examples: |
+    - oi
+    - olá
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: goodbye
+  examples: |
+    - tchau
+    - xau
+    - até mais
+    - apenas isso
+    - não precisa mais
+    - só isso mesmo
+    - terminei
+    - terminar
+    - concluir
+    - acabar
+    - encerrar
+    - finalizar
+    - sair
+
+- intent: affirm
+  examples: |
+    - sim
+    - y
+    - ótimo
+    - tudo bem
+    - ok
+    - aham
+    - está bem
+    - está certo
+    - está bom
+    - de acordo
+    - pode ser
+    - pode
+    - podemos
+    - tá
+
+- intent: deny
+  examples: |
+    - não
+    - n
+    - nunca
+    - jamais
+    - não era isso
+    - já disse não
+    - nenhum
+    - nem pensar
+    - não concordo
+    - não quero
+    - negativo
+    - não posso
+    - não tem como
+    - não sou obrigado
+
+- intent: play_game
+  examples: |
+    - [1](menu_opt)
+    - jogar
+    - pedra papel tesoura
+    - Jogar pedra papel tesoura
+
+- intent: dog_pic
+  examples: |
+    - [2](menu_opt)
+    - foto de um dog
+    - foto de cachorro
+    - doguinho
+    - Ver a foto de um doguinho

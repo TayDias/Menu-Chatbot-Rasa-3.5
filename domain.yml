@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - inform
+  - option
+  - affirm
+  - deny
+  - dog_pic
+  - play_game
+
+entities:
+  - menu_opt
+  - game_opt
+
+
+slots:
+  menu_choice:
+    type: categorical
+    values:
+      - 1
+      - 2
+    mappings:
+    - type: from_entity
+      entity: menu_opt
+
+  game_choice:
+    type: categorical
+    values:
+      - rock
+      - paper
+      - scissors
+    mappings:
+    - type: from_entity
+      entity: game_opt
+    
+
+responses:
+  utter_greet:
+  - text: "Olá!"
+  - text: "Oi!"
+
+  utter_menu:
+  - text: "O que você deseja fazer agora?\n\n(1) Jogar Pedra Papel Tesoura\n(2) Ver a foto de um doguinho"
+
+  utter_dog_pic:
+  - text: "Aqui está:"
+
+  utter_play:
+  - text: "Escolha:\n\n(R)Pedra\n(P)Papel\n(S)Tesoura"
+
+  utter_play_again:
+  - text: "Você quer jogar de novo?\n\n(Y)Sim\n(N)Não"
+
+  utter_goodbye:
+  - text: "Tchau!"
+  - text: "Até mais!"
+
+
+actions:
+  - action_play_rps
+  - action_random_dog
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
