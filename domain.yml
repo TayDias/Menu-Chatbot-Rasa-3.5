@@ -11,19 +11,16 @@ intents:
   - play_game
 
 entities:
-  - menu_opt
-  - game_opt
+  - number
+  - choice
 
 
 slots:
   menu_choice:
-    type: categorical
-    values:
-      - 1
-      - 2
+    type: text
     mappings:
     - type: from_entity
-      entity: menu_opt
+      entity: number
 
   game_choice:
     type: categorical
@@ -33,7 +30,7 @@ slots:
       - scissors
     mappings:
     - type: from_entity
-      entity: game_opt
+      entity: choice
     
 
 responses:

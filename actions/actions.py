@@ -6,6 +6,7 @@
 
 from typing import Any, Text, Dict, List
 import random
+import requests
 
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -98,9 +99,19 @@ class ActionRandomDog(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        
+        # The API endpoint
+        url = "https://dog.ceo/api/breeds/image/random"
     
-        # Codar uma request a Api externa para pegar fotos diferentes sempre
-        dispatcher.utter_message(text="https://images.dog.ceo/breeds/terrier-norfolk/n02094114_907.jpg")
+        # A GET request to the API
+        response = requests.get(url)
+
+        # Get picture url
+        response_json = response.json()
+        image = '"'+response_json['message']+'"'
+
+        dispatcher.utter_message(image=image)
 
 
         return []

@@ -3,12 +3,12 @@ version: "3.1"
 nlu:
 - intent: inform
   examples: |
-    - [pedra](game_opt)
-    - [papel](game_opt)
-    - [tesoura](game_opt)
-    - [r](game_opt)
-    - [p](game_opt)
-    - [s](game_opt)
+    - [pedra](choice)
+    - [papel](choice)
+    - [tesoura](choice)
+    - [r](choice)
+    - [p](choice)
+    - [s](choice)
 
 - intent: greet
   examples: |
@@ -70,15 +70,15 @@ nlu:
 
 - intent: play_game
   examples: |
-    - [1](menu_opt)
     - jogar
     - pedra papel tesoura
     - Jogar pedra papel tesoura
+    - [1](number)
 
 - intent: dog_pic
   examples: |
-    - [2](menu_opt)
     - foto de um dog
     - foto de cachorro
     - doguinho
     - Ver a foto de um doguinho
+    - [2](number)
