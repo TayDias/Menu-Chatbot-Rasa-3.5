@@ -4,7 +4,7 @@ intents:
   - greet
   - goodbye
   - inform
-  - option
+  - menu_opt
   - affirm
   - deny
   - dog_pic
@@ -17,11 +17,14 @@ entities:
 
 slots:
   menu_choice:
-    type: text
+    type: categorical
+    values:
+      - 1
+      - 2
+      - 3
     mappings:
     - type: from_entity
       entity: number
-
   game_choice:
     type: categorical
     values:
@@ -39,7 +42,7 @@ responses:
   - text: "Oi!"
 
   utter_menu:
-  - text: "O que você deseja fazer agora?\n\n(1) Jogar Pedra Papel Tesoura\n(2) Ver a foto de um doguinho"
+  - text: "O que você deseja fazer agora?\n\n(1) Jogar Pedra Papel Tesoura\n(2) Ver a foto de um doguinho\n(3) Encerrar a conversa"
 
   utter_dog_pic:
   - text: "Aqui está:"

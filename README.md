@@ -27,8 +27,9 @@
 
 # Funcionalidades
 
-1 - Jogar Pedra/Papel/Tesoura
-2 - Ver fotos de cachorros
+- (1) Jogar Pedra/Papel/Tesoura
+- (2) Ver fotos de cachorros
+- (3) Encerrar a conversa
 
 
 # Modelo de NLU
@@ -56,6 +57,10 @@
       <td>Identificar opção escolhida entre as entidades declaradas</td>
     </tr>
     <tr>
+      <td>menu_opt</td>
+      <td>Identificar opção escolhida entre as opções do menu principal</td>
+    </tr>
+    <tr>
       <td>affirm</td>
       <td>Identificar afirmação quanto a ação oferecida pelo assistente</td>
     </tr>
@@ -65,11 +70,11 @@
     </tr>
     <tr>
       <td>play_game</td>
-      <td>Identificar solicitação de uso da funcionalidade "1 - Jogar Pedra/Papel/Tesoura"</td>
+      <td>Identificar solicitação de uso da funcionalidade "(1) Jogar Pedra/Papel/Tesoura"</td>
     </tr>
     <tr>
       <td>dog_pic</td>
-      <td>Identificar solicitação de uso da funcionalidade "2 - Ver fotos de cachorros"</td>
+      <td>Identificar solicitação de uso da funcionalidade "(2) Ver fotos de cachorros"</td>
     </tr>
   </body>
 </table>

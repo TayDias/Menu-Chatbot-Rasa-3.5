@@ -10,6 +10,12 @@ nlu:
     - [p](choice)
     - [s](choice)
 
+- intent: menu_opt
+  examples: |
+    - [1](number)
+    - [2](number)
+    - [3](number)
+
 - intent: greet
   examples: |
     - oi
@@ -73,7 +79,6 @@ nlu:
     - jogar
     - pedra papel tesoura
     - Jogar pedra papel tesoura
-    - [1](number)
 
 - intent: dog_pic
   examples: |
@@ -81,4 +86,3 @@ nlu:
     - foto de cachorro
     - doguinho
     - Ver a foto de um doguinho
-    - [2](number)

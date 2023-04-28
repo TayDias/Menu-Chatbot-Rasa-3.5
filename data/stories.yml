@@ -10,14 +10,22 @@ stories:
 
 - story: show random dog pic
   steps:
-  - intent: dog_pic
+  - or:
+    - intent: dog_pic
+    - intent: menu_opt
+      entities:
+        - number: "2"
   - action: utter_dog_pic
   - action: action_random_dog
   - action: utter_menu
 
 - story: play rock paper scissors
   steps:
-  - intent: play_game
+  - or:
+    - intent: play_game
+    - intent: menu_opt
+      entities:
+        - number: "1"
   - action: utter_play
   - intent: inform
   - action: action_play_rps
