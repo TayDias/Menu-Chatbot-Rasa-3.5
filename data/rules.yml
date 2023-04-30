@@ -7,9 +7,9 @@ rules:
   - intent: goodbye
   - action: utter_goodbye
 
-- rule: Say goodbye when the user chooses 3
+- rule: Say goodbye when the user chooses 4
   steps:
   - intent: menu_opt
     entities:
-      - number: "3"
+      - number: "4"
   - action: utter_goodbye

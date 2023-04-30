@@ -3,15 +3,18 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - inform
+  - inform_rps
+  - inform_cotw
   - menu_opt
   - affirm
   - deny
   - dog_pic
-  - play_game
+  - play_rps
+  - play_cotw
 
 entities:
   - number
+  - letter
   - choice
 
 
@@ -22,10 +25,12 @@ slots:
       - 1
       - 2
       - 3
+      - 4
     mappings:
     - type: from_entity
       entity: number
-  game_choice:
+
+  rps_choice:
     type: categorical
     values:
       - rock
@@ -34,6 +39,17 @@ slots:
     mappings:
     - type: from_entity
       entity: choice
+
+  cotw_choice:
+    type: categorical
+    values:
+      - A
+      - B
+      - C
+      - D
+    mappings:
+    - type: from_entity
+      entity: letter
     
 
 responses:
@@ -42,7 +58,7 @@ responses:
   - text: "Oi!"
 
   utter_menu:
-  - text: "O que você deseja fazer agora?\n\n(1) Jogar Pedra Papel Tesoura\n(2) Ver a foto de um doguinho\n(3) Encerrar a conversa"
+  - text: "O que você quer fazer agora?\n\n(1) Ver a foto de um doguinho\n(2) Jogar Pedra Papel Tesoura\n(3) Jogar Descubra a Capital do País\n(4) Encerrar a conversa"
 
   utter_dog_pic:
   - text: "Aqui está:"
@@ -61,6 +77,9 @@ responses:
 actions:
   - action_play_rps
   - action_random_dog
+  - action_play_cotw
+  - action_validate_cotw_answer
+
 
 session_config:
   session_expiration_time: 60

@@ -14,20 +14,32 @@ stories:
     - intent: dog_pic
     - intent: menu_opt
       entities:
-        - number: "2"
+        - number: "1"
   - action: utter_dog_pic
   - action: action_random_dog
+  - action: utter_menu
+
+- story: play capitals of the world
+  steps:
+  - or:
+    - intent: play_cotw
+    - intent: menu_opt
+      entities:
+        - number: "3"
+  - action: action_play_cotw
+  - intent: inform_cotw
+  - action: action_validate_cotw_answer
   - action: utter_menu
 
 - story: play rock paper scissors
   steps:
   - or:
-    - intent: play_game
+    - intent: play_rps
     - intent: menu_opt
       entities:
-        - number: "1"
+        - number: "2"
   - action: utter_play
-  - intent: inform
+  - intent: inform_rps
   - action: action_play_rps
   - action: utter_play_again
 

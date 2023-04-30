@@ -1,7 +1,7 @@
 version: "3.1"
 
 nlu:
-- intent: inform
+- intent: inform_rps
   examples: |
     - [pedra](choice)
     - [papel](choice)
@@ -9,6 +9,13 @@ nlu:
     - [r](choice)
     - [p](choice)
     - [s](choice)
+
+- intent: inform_cotw
+  examples: |
+    - [A](letter)
+    - [B](letter)
+    - [C](letter)
+    - [D](letter)
 
 - intent: menu_opt
   examples: |
@@ -74,9 +81,10 @@ nlu:
     - não tem como
     - não sou obrigado
 
-- intent: play_game
+- intent: play_rps
   examples: |
-    - jogar
+    - jogar rps
+    - jogar ppt
     - pedra papel tesoura
     - Jogar pedra papel tesoura
 
@@ -86,3 +94,11 @@ nlu:
     - foto de cachorro
     - doguinho
     - Ver a foto de um doguinho
+
+- intent: play_cotw
+  examples: |
+    - jogar cotw
+    - capitais
+    - capital
+    - jogar capitais
+    - Jogar Capitais do Mundo

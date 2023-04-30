@@ -27,9 +27,10 @@
 
 # Funcionalidades
 
-- (1) Jogar Pedra/Papel/Tesoura
-- (2) Ver fotos de cachorros
-- (3) Encerrar a conversa
+- (1) Ver foto de cachorros
+- (2) Jogar Pedra/Papel/Tesoura
+- (3) Jogar Descubra a Capital do País
+- (4) Encerrar a conversa
 
 
 # Modelo de NLU
@@ -53,7 +54,11 @@
       <td>Identificar o fim da interação com o assistente</td>
     </tr>
     <tr>
-      <td>inform</td>
+      <td>inform_rps</td>
+      <td>Identificar opção escolhida entre as entidades declaradas</td>
+    </tr>
+    <tr>
+      <td>inform_cotw</td>
       <td>Identificar opção escolhida entre as entidades declaradas</td>
     </tr>
     <tr>
@@ -69,12 +74,16 @@
       <td>Identificar negação quanto a ação oferecida pelo assistente</td>
     </tr>
     <tr>
-      <td>play_game</td>
-      <td>Identificar solicitação de uso da funcionalidade "(1) Jogar Pedra/Papel/Tesoura"</td>
+      <td>play_rps</td>
+      <td>Identificar solicitação de uso da funcionalidade "(2) Jogar Pedra/Papel/Tesoura"</td>
+    </tr>
+    <tr>
+      <td>play_cotw</td>
+      <td>Identificar solicitação de uso da funcionalidade "(3) Jogar Descubra a Capital do País"</td>
     </tr>
     <tr>
       <td>dog_pic</td>
-      <td>Identificar solicitação de uso da funcionalidade "(2) Ver fotos de cachorros"</td>
+      <td>Identificar solicitação de uso da funcionalidade "(1) Ver foto de cachorros"</td>
     </tr>
   </body>
 </table>
@@ -90,6 +99,10 @@
     <tr>
       <td>number</td>
       <td>Números utilizados como opções no menu de funcionalidades disponíveis</td>
+    </tr>
+    <tr>
+      <td>letter</td>
+      <td>Letras utilizados como opções para o jogo de Capital do País</td>
     </tr>
     <tr>
       <td>choice</td>
@@ -120,11 +133,20 @@ https://rasa.com/docs/rasa/command-line-interface
 Conversational AI with Rasa Open Source 3.x
 https://www.youtube.com/playlist?list=PL75e0qA87dlEjGAc9j9v3a5h1mxI2Z9fi
 
+Create a List from 1 to 100 in Python
+https://java2blog.com/create-list-from-1-to-100-python/
+
 Emoji-cheat-sheet:
 https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md
 
 Introduction to Rasa Open Source & Rasa Pro
 https://rasa.com/docs/rasa/
+
+Lista de todos os países do mundo e suas capitais - Todos os países em ordem alfabética
+https://www.sport-histoire.fr/pt/Geografia/Paises_por_ordem_alfabetica.php
+
+Python Random sample() Method
+https://www.w3schools.com/python/ref_random_sample.asp
 
 Rasa 3.0: Create a new assistant in Rasa 3.0 (Livecoding)
 https://www.youtube.com/watch?v=PfYBXidENlg
