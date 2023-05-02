@@ -115,8 +115,8 @@
 
 ## Pré-requisitos
 
-- **Python** versão 3.10.6 ou superior;
-- **Rasa** - versão 3.5.0 ou superior;
+- **Python** versão 3 ou superior;
+- **Rasa** - versão 3 ou superior;
 
 ## Teste em homologação
 
